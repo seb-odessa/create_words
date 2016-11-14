@@ -24,18 +24,20 @@ fn load(filename: &String) -> HashMap<String, String> {
                 }
             }
             if !key.is_empty() {
-                map.insert(key.clone().to_lowercase(), val.clone());
+                map.insert(key.clone().to_uppercase(), val.clone());
             }
             key.clear();
             val.clear();
         }
     }
-    map
+    return map;
 }
 
-fn check_word(mut word: HashMap<char, i32>, maybe: &String) -> bool {
-    for ch in maybe.chars() {
-        let entry = word.entry(ch).or_insert(0);
+fn check_word(mut map: HashMap<char, i32>, word: &String) -> bool {
+    let mut word: Vec<char> = word.chars().collect();
+    word.sort();
+    for ch in word {
+        let entry = map.entry(ch).or_insert(0);
         if *entry == 0 {
             return false;
         } else {
@@ -66,7 +68,7 @@ fn main() {
     if args.len() != 3 {
         println!("Usage {} WORD DICTIONARY", args[0]);
     }
-    let word: String = args[1].clone().to_lowercase();
+    let word: String = args[1].clone().to_uppercase();
     println!("{}", &word);
     let map = load(&args[2]);
     for found in &check(&word, &map) {
