@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cbdfb56-9582-4cc1-bf2d-7573a7abf12f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/этажерка" afterPath="$PROJECT_DIR$/этажерка" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.rs" afterPath="$PROJECT_DIR$/src/main.rs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/элекровоз" afterPath="$PROJECT_DIR$/элекровоз" />
-    </list>
+    <list default="true" id="6cbdfb56-9582-4cc1-bf2d-7573a7abf12f" name="Default" comment="" />
     <ignored path="create_words.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
